@@ -15,7 +15,7 @@ import multiprocessing
 import stat
 from multiprocessing import freeze_support
 
-def trier_images_masks(chemin_dossier):
+def sort_images_masks(chemin_dossier):
     sous_dossier_images = os.path.join(chemin_dossier, 'images')
     sous_dossier_masks = os.path.join(chemin_dossier, 'masks')
 
@@ -44,12 +44,12 @@ def trier_images_masks(chemin_dossier):
                 nouveau_chemin = os.path.join(sous_dossier_images, fichier)
                 shutil.move(chemin_fichier, nouveau_chemin)
 
-# Exemple d'utilisation
-dossier_principal = '/content/drive/MyDrive/IIIA-CSIC/data/images/outer_segment_70_no_pipeline/F'
-trier_images_masks(dossier_principal)
+# Code to separate images from masks (masks avec a "F" at the end of their file name)
+main_folder = '/content/drive/MyDrive/IIIA-CSIC/data/images/outer_segment_70_no_pipeline/F'
+sort_images_masks(main_folder)
 
 #Here we define the path to the image we want to process, the path of the associated wask and the path of the folder we want to save the images in
-path_image = '/content/drive/MyDrive/IIIA-CSIC/data/images/outer_segment_70_no_pipeline/F/images' #'/content/drive/MyDrive/IIIA-CSIC/data/images/image_batch'
+path_image = '/content/drive/MyDrive/IIIA-CSIC/data/images/outer_segment_70_no_pipeline/F/images'
 path_mask = '/content/drive/MyDrive/IIIA-CSIC/data/images/outer_segment_70_no_pipeline/F/masks'
 path_out = '/content/drive/MyDrive/IIIA-CSIC/data/images/outer_finetuning'
 
