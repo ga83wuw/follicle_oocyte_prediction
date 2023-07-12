@@ -7,8 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1DbUxNCu2WXxOpSjkF08cGnSOcKcqSMHV
 """
 
-!pip install scikit-image
+#!pip install scikit-image (in collaboratory)
 
+import scikit-image
 import os
 import copy
 import numpy as np
