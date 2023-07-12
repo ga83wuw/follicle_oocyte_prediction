@@ -1,4 +1,4 @@
-# Follicle-Oocyte Ratio and its Contribution of a Healthy Oocyte Maturation
+# Follicle-Oocyte Ratio and its contribution for a Healthy Oocyte Maturation
 
 ## Overview
 We propose a deep learning method to segment the areas of oocytes and follicles in a follicle image database. 
