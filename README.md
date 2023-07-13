@@ -15,6 +15,11 @@ First we process the images to extract the region of interest (ROI) of the image
 
 Next step is training a deep learning model in order to segment the different parts of the ovocytes (outter part and inner part). For that we chose to use the classical Unet neural network :
 ![Schema](figures/unet.png)
-to which we add an spatial attention mechanism for better results:
+to which we add a spatial attention mechanism for better results:
+![Schema](figures/attention_unet.png)
 
-The training is made in two phases: first phase, we pretrain the Unet on 300 images from a dataset of similar task dataset and second phase, we fine fine tune on 65 images from our labelled oocyte dataset. 
+The training is made in two phases: first phase, we pretrain the Unet on 300 images from a dataset of similar task dataset and second phase, we finetune the Unet on 65 images from our labelled oocyte dataset.
+
+
+
+
