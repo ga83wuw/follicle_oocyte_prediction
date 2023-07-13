@@ -24,6 +24,11 @@ The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentatio
 |:-------:|:-------:|
 | ![Image 1](figures/eovo_530_t1.png) | ![Image 2](figures/eovo_531_t1.png) |
 
+| Image 1 | Image 2 |
+|:-------:|:-------:|
+| <img src="figures/eovo_530_t1.png" alt="Image 1" width="200px"> | <img src="figures/eovo_530_t1.png" alt="Image 2" width="200px"> |
+
+
 
 We first used the Dice Loss as loss function for the Unet, but using a "shape-aware" Dice Loss gave better results in terms of dice coefficient. This loss is defined as the product of the dice loss and a term equal to the euclidean distance between predicted and target masks contours. Therefore the Unet is forced to focus on the border of the segmentation zone, which is the crucial and most difficult part of the segmentation.
 
