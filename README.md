@@ -19,9 +19,10 @@ to which we add a spatial attention mechanism for better results:
 ![Schema](figures/attention_unet.png)
 
 The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentation.py' and 'Attention_Unet_Outter_Part_Segmentation.py' files: first phase, we pretrain the Unet on 300 images from a dataset of a similar task dataset and second phase, we finetune the Unet on 65 images from our labelled oocyte dataset.
+
 | Image 1 | Image 2 |
 |:-------:|:-------:|
-| ![Image 1](path/to/image1.jpg) | ![Image 2](path/to/image2.jpg) |
+| ![Image 1](path/to/eovo_530_t1.png) | ![Image 2](path/to/eovo_531_t1.png) |
 
 
 
