@@ -20,10 +20,9 @@ to which we add a spatial attention mechanism for better results:
 
 The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentation.py' and 'Attention_Unet_Outter_Part_Segmentation.py' files: first phase, we pretrain the Unet on 300 images from a dataset of a similar task dataset and second phase, we finetune the Unet on 65 images from our labelled oocyte dataset.
 
-| Image 1 | Image 2 |
+| Image from the pretraining dataset | Mask from the pretraining dataset |
 |:-------:|:-------:|
-| ![Image 1](path/to/eovo_530_t1.png) | ![Image 2](path/to/eovo_531_t1.png) |
-
+| ![Image 1](figures/eovo_530_t1.png) | ![Image 2](figures/eovo_531_t1.png) |
 
 
 We first used the Dice Loss as loss function for the Unet, but using a "shape-aware" Dice Loss gave better results in terms of dice coefficient. This loss is defined as the product of the dice loss and a term equal to the euclidean distance between predicted and target masks contours. Therefore the Unet is forced to focus on the border of the segmentation zone, which is the crucial and most difficult part of the segmentation.
