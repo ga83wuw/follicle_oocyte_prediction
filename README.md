@@ -15,7 +15,7 @@ First we process the images to extract the region of interest (ROI) of the image
 
 Next step is training a deep learning model in order to segment the different parts of the ovocytes (outter part and inner part). For that we chose to use the classical Unet neural network :
 ![Schema](figures/unet.png)
-to which we add a spatial attention mechanism for better results:
+to which we add a spatial attention mechanism for better results like in the paper [arXiv:1804.03999]:
 ![Schema](figures/attention_unet.png)
 
 The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentation.py' and 'Attention_Unet_Outter_Part_Segmentation.py' files: first phase, we pretrain the Unet on 300 images from a dataset of a similar task dataset and second phase, we finetune the Unet on 65 images from our labelled oocyte dataset.
@@ -24,9 +24,9 @@ The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentatio
 |:-------:|:-------:|
 | ![Image 1](figures/eovo_530_t1.png) | ![Image 2](figures/eovo_531_t1.png) |
 
-| Image 1 | Image 2 |
+| Image from the pretraining dataset | Mask from the pretraining dataset |
 |:-------:|:-------:|
-| <img src="figures/eovo_530_t1.png" alt="Image 1" width="200px"> | <img src="figures/eovo_530_t1.png" alt="Image 2" width="200px"> |
+| <img src="figures/eovo_530_t1.png" alt="Image 1" width="300px"> | <img src="figures/eovo_530_t1.png" alt="Image 2" width="300px"> |
 
 
 
