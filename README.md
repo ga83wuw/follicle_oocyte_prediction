@@ -22,11 +22,7 @@ The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentatio
 
 | Image from the pretraining dataset | Mask from the pretraining dataset |
 |:-------:|:-------:|
-| ![Image 1](figures/eovo_530_t1.png) | ![Image 2](figures/eovo_531_t1.png) |
-
-| Image from the pretraining dataset | Mask from the pretraining dataset |
-|:-------:|:-------:|
-| <img src="figures/eovo_530_t1.png" alt="Image 1" width="300px"> | <img src="figures/eovo_530_t1.png" alt="Image 2" width="300px"> |
+| <img src="figures/eovo_530_t1.png" alt="Image 1" width="300px"> | <img src="figures/eovo_531_t1.png" alt="Image 2" width="300px"> |
 
 
 
