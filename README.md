@@ -58,6 +58,12 @@ With the XGBoost library we can visualize feature importance for each of the thr
 | <p align="center"><img src="figures/features_importance.png" alt="Image 5" width="300px"></p> |
 
 
+## Feature Importance
+
+<p align="center">
+  <img src="figures/features_importance.png" alt="Image 5" width="300px">
+</p>
+
 
 
 
