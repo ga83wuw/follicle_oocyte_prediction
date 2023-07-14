@@ -18,8 +18,6 @@ First we process the images to extract the region of interest (ROI) of the image
 ### Follicle and oocyte segmentation
 Next step is training a deep learning model in order to segment the different parts of the ovocytes (outter part and inner part). For that we chose to use the classical Unet neural network :
 ![Schema](figures/unet.png)
-to which we add a spatial attention mechanism for better results like in the paper [arXiv:1804.03999]:
-![Schema](figures/attention_unet.png)
 
 The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentation.py' and 'Attention_Unet_Outter_Part_Segmentation.py' files: first phase, we pretrain the Unet on 300 images from a dataset of a similar task dataset and second phase, we finetune the Unet on 65 images from our labelled oocyte dataset. The original loss function we used was the Dice Loss.
 
@@ -32,6 +30,10 @@ The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentatio
 
 We decided to modify the classical Unet model by adding  a spatial attention mechanism for better results like in the paper [arXiv:1804.03999]:
 ![Schema](figures/attention_unet.png)
+
+| Attentive Unet Architecture |
+|:-------:|
+| <img src="figures/attention_unet.png alt="Image 4" width="300px"> |
 This led to a better test dice coeficient, by helping the network to understand which part of the images were important for the segmentation. 
 
 We first used the Dice Loss as loss function for the Unet, but using a "shape-aware" Dice Loss gave better results in terms of dice coefficient. This loss is defined as the product of the dice loss and a term equal to the euclidean distance between predicted and target masks contours. Therefore the Unet is forced to focus on the border of the segmentation zone, which is the crucial and most difficult part of the segmentation because it's where the artifacts are located. This approach also led to an increase of the dice coefficient.
