@@ -51,6 +51,7 @@ Predicting the calasses (correct maturation /failed maturation) gives not so goo
 
 ## Results
 
+The Unets were able to achieve a dice loss of 0.12 after some hyperparameters tuning.
 With the XGBoost library we can visualize feature importance for each of the three models and compute the achieved scores: 
 
 <p align="center">
