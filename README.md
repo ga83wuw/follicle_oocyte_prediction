@@ -29,11 +29,11 @@ The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentatio
 ### Ameliorations
 
 We decided to modify the classical Unet model by adding  a spatial attention mechanism for better results like in the paper [arXiv:1804.03999]:
-![Schema](figures/attention_unet.png)
+
 
 | Attentive Unet Architecture |
 |:-------:|
-| <img src="figures/attention_unet.png alt="Image 4" width="300px"> |
+| <img src="figures/attention_unet.png" alt="Image 4" width="300px"> |
 This led to a better test dice coeficient, by helping the network to understand which part of the images were important for the segmentation. 
 
 We first used the Dice Loss as loss function for the Unet, but using a "shape-aware" Dice Loss gave better results in terms of dice coefficient. This loss is defined as the product of the dice loss and a term equal to the euclidean distance between predicted and target masks contours. Therefore the Unet is forced to focus on the border of the segmentation zone, which is the crucial and most difficult part of the segmentation because it's where the artifacts are located. This approach also led to an increase of the dice coefficient.
