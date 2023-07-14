@@ -45,7 +45,7 @@ Next step, was to create a predictive model to predict if an oocyte will be able
 
 We used the SMOTE (Synthetic Minority Oversampling Technique) algorithm to get rid of the unbalanced classes issue.
 
-## Probabilistic Predictions
+### Probabilistic Predictions
 
 Predicting the calasses (correct maturation /failed maturation) gives not so good results, thus a better approach is to obtain probabilistic predictions instead of binary classification. Using XGBoost python library we are able to make XGBoost produce probabilistic predictions and then to keep only the one that are above a threshold of certainty. By this way we are able to keep only a few predictions that we are sure about.
 
