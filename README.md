@@ -51,9 +51,9 @@ Predicting the calasses (correct maturation /failed maturation) gives not so goo
 
 ## Results
 
-With the XGBoost library we can visualize feature importance: 
+With the XGBoost library we can visualize feature importance for each of the three models and compute the achieved scores: 
 
-| Attentive Unet Architecture |
+| Feature Importance |
 |:-------:|
 | <img src="figures/features_importance.png" alt="Image 5" width="300px"> |
 
