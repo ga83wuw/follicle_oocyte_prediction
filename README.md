@@ -55,7 +55,7 @@ With the XGBoost library we can visualize feature importance for each of the thr
 
 | Feature Importance |
 |:-------:|
-| <img src="figures/features_importance.png" alt="Image 5" width="300px"> |
+| <p align="center"><img src="figures/features_importance.png" alt="Image 5" width="300px"></p> |
 
 
 
