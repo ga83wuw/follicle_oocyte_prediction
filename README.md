@@ -31,9 +31,9 @@ The training is made in two phases in the 'Attention_Unet_Inner_Part_Segmentatio
 We decided to modify the classical Unet model by adding  a spatial attention mechanism for better results like in the paper [arXiv:1804.03999]:
 
 
-| Attentive Unet Architecture |
-|:-------:|
-| <img src="figures/attention_unet.png" alt="Image 4" width="300px"> |
+<p align="center">
+<img src="figures/attention_unet.png" alt="Image 4" width="300px">
+</p>
 
 
 This led to a better test dice coeficient, by helping the network to understand which part of the images were important for the segmentation. 
@@ -52,13 +52,6 @@ Predicting the calasses (correct maturation /failed maturation) gives not so goo
 ## Results
 
 With the XGBoost library we can visualize feature importance for each of the three models and compute the achieved scores: 
-
-| Feature Importance |
-|:-------:|
-| <p align="center"><img src="figures/features_importance.png" alt="Image 5" width="300px"></p> |
-
-
-## Feature Importance
 
 <p align="center">
   <img src="figures/features_importance.png" alt="Image 5" width="300px">
