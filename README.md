@@ -49,6 +49,15 @@ We used the SMOTE (Synthetic Minority Oversampling Technique) algorithm to get r
 
 Predicting the calasses (correct maturation /failed maturation) gives not so good results, thus a better approach is to obtain probabilistic predictions instead of binary classification. Using XGBoost python library we are able to make XGBoost produce probabilistic predictions and then to keep only the one that are above a threshold of certainty. By this way we are able to keep only a few predictions that we are sure about.
 
+## Results
+
+With the XGBoost library we can visualize feature importance: 
+
+| Attentive Unet Architecture |
+|:-------:|
+| <img src="figures/features_importance.png" alt="Image 5" width="300px"> |
+
+
 
 
 
